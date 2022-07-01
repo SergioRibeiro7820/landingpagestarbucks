@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsivo Starbucks Website Landing Page </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+    <body>
+        <section>
+            <div class="circulo"></div>
+            <header>
+                <a href="#"><img src="./assets/logo.png" class="logo"></a>
+                <div class="alternar" onclick="alternarMenu();"></div>
+                <ul class="list">
+                    <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul><!--Menu-->
+            </header>
+                <div class="content">
+                    <div class="textBox">
+                        <h2>It's not just Coffe<br>It's <span>Starbucks</span></h2><!--Anúncio-->
+                            <p>Donec scelerisque volutpat nisl. 
+                                In hac habitasse platea dictumst.<br> 
+                                Phasellus rhoncus ipsum at scelerisque placerat. 
+                                Aliquam molestie quis lectus nec ultrices. 
+                                Nunc mattis sodales magna eu cursus. 
+                                Suspendisse ornare tortor eu rutrum volutpat.
+                            </p>
+                            <a href="https://sergioribeiro7820.github.io/cartao-digital/">Learn More</a><!--Botão-->
+                    </div><!--caixa de texto lorem ipsum-->
+                        <div class="imgBox">
+                            <img src="/assets/img1.png" class="starbucks">
+                        </div>
+                </div><!--caixa imagem-->
+
+                <ul class="thumb">
+                    <li><img src="./assets/thumb1.png" onclick="imgSlider('./assets/img1.png');changeCirculoColor('#017143')"></li>
+                    <li><img src="./assets/thumb2.png" onclick="imgSlider('./assets/img2.png');changeCirculoColor('#eb7495')"></li>
+                    <li><img src="./assets/thumb3.png" onclick="imgSlider('./assets/img3.png');changeCirculoColor('#d752b1')"></li>
+                </ul><!--thumb - outros sabores-->
+
+                <ul class="redes">
+                    <li><a href="#"><img src="./assets/facebook.png"></a></li>
+                    <li><a href="#"><img src="./assets/instagram.png"></a></li>
+                    <li><a href="#"><img src="./assets/twitter.png"></a></li>
+                </ul><!--redes sociais-->
+        </section>
+
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector('.starbucks').src = anything;
+            }
+
+            function changeCirculoColor(color){
+                const circulo = document.querySelector('.circulo');
+                circulo.style.background = color;
+            }
+
+            function alternarMenu(){
+                var menuAlternar = document.querySelector('.alternar');
+                var list = document.querySelector('.list');
+                menuAlternar.classList.toggle('active')
+                list.classList.toggle('active')
+            }
+
+        </script>
+        <!--javascript - troca de saborese bacground circulo-->
+    </body>
+</html>
